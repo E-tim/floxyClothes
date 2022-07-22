@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0 0 0;
+}
+header h3 {
+    font-size: 22px;
+    font-weight: 200;
+}
+.fadeOut {
+    background-color: black;
+    padding: 20px;
+    margin: 0 0 15px 0;
+    transform: translateX(-90%);
+    transition: transform 1s ease-in ;
+}
+.fadeIn {
+    transform: translateX(0);
+}
+h2 {
+    text-align: center;
+    font-weight: 200;
+    color: white;
+    font-family: fantasy;
+}
+
+header a {
+    position: absolute;
+    top: 10;
+    right: 10px;
+    text-decoration: none;
+    font-size: 10px;
+    background-color: lightblue;
+    color: black;
+    text-transform: uppercase;
+    padding: 5px;
+    
+}
+
+.clothesList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    place-items: center;
+    grid-gap: 3px;
+    margin: 20px 0;
+    padding: 10px;
+}
+.clothes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.myImg {
+    width: 150px;
+    height: 220px;
+}
+.displayBig {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    /* top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+}
+/* .orderDiv {
+    display: flex;
+    justify-content: space-between;
+} */
+.orderDiv a{
+    text-decoration: none;
+    font-size: 12px;
+    background-color: #3691b0;
+    color: white;
+    padding: 3px;
+}
+.clothes p {
+    font-size: 15px;
+    text-align: center;
+}
+.clothes span {
+    color: #800080;
+    font-weight: 700;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: lightblue;
+    padding: 10px;
+}
+.socials {
+
+}

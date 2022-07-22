@@ -1,0 +1,47 @@
+{
+  "name": "firebase-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "run-p frontend backend",
+    "backend": "nodemon server",
+    "frontend": "webpack --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.18.5",
+    "@babel/preset-react": "^7.17.12",
+    "axios": "^0.27.2",
+    "babel-loader": "^8.2.5",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "firebase": "^9.8.3",
+    "firebase-admin": "^11.0.0",
+    "fs-extra": "^10.1.0",
+    "mongodb": "^4.7.0",
+    "multer": "^1.4.5-lts.1",
+    "nodemon": "^2.0.16",
+    "npm-run-all": "^4.1.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icon": "^1.0.0",
+    "react-icons": "^4.4.0",
+    "react-router-dom": "^6.3.0",
+    "sanitize-html": "^2.7.0",
+    "sharp": "^0.30.7",
+    "socket.io": "^4.5.1",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-node-externals": "^3.0.0",
+    "ws": "^8.8.0"
+  },
+  "devDependencies": {
+    "source-map-loader": "^4.0.0"
+  }
+}
