@@ -128,7 +128,7 @@ app.delete('/deleteCloth/:id', async(req, res)=> {
 //  connecting to mongo db
 const start = async() => {
     // const client = new MongoClient('mongodb://root:root@localhost:27017/floxyStore?&authSource=admin');
-    const client = new MongoClient(process.env.MONGODB_URI, { useNewUrlParser: true });
+    const client = new MongoClient(process.env.MONGODB_URI);
 
     await client.connect();
     db = client.db();
