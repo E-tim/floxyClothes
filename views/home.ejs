@@ -22,7 +22,7 @@
     <div class="clothesList">
         <% allClothes.map( clothes => { %>
             <div class="clothes">
-                <img class="myImg" src="<%= clothes.photo %>"/>
+                <img class="myImg" src="/uploaded-photos/<%= clothes.photo %>"/>
                 <div class="orderDiv">
                     <p><%= clothes.name %> <br> <span>#<%= clothes.price %></span> <a href="https://wa.me/message/JF43NBGSIHC7I1">Order</a></p>
                     

@@ -26,7 +26,7 @@ const ClothList = ({clothe, setClothes, clothes}) => {
             <FaEdit style={{color: 'blue', fontSize: '22px'}} onClick={onToggle} />
             <FaTimes style={{color: 'red', fontSize: '22px'}} onClick={del} />
           </div>
-          <img src={ !clothe.photo ? 'https://ps.w.org/user-avatar-reloaded/assets/icon-128x128.png?rev=2540745' : clothe.photo } alt='babies-clothing' />
+          <img src={ !clothe.photo ? 'https://ps.w.org/user-avatar-reloaded/assets/icon-128x128.png?rev=2540745' : `/uploaded-photos/${clothe.photo}` } alt='babies-clothing' />
           <div>
             <p>{clothe.name} <br></br><span> #{clothe.price}</span></p>
           </div>
