@@ -68,9 +68,9 @@ app.get('/clotheList', async(req, res)=> {
 // adding to database
 app.post('/addClothes' , upload.single('photo') , cleanUp ,  async(req, res)=> {
     if (req.file) {
-        // const photoFileName = `${Date.now()}.jpeg`;
-        await sharp(req.file.buffer).jpeg({quality: 60}).toFile(path.join("public", "uploaded-photos", req.cleanData.photo))
-        req.cleanData.photo = photo;
+        const photoFileName = `${Date.now()}.jpeg`;
+        await sharp(req.file.buffer).jpeg({quality: 60}).toFile(path.join("public", "uploaded-photos", photoFileName))
+        req.cleanData.photo = photoFileName;
     }
 
     console.log(req.body);
@@ -83,9 +83,9 @@ app.post('/addClothes' , upload.single('photo') , cleanUp ,  async(req, res)=> {
 // update the clothes in db
 app.post('/upadteCloth', upload.single('photo'),cleanUp,async(req, res)=> {
     if (req.file) {
-        // const photoFileName = `${Date.now()}.jpeg`;
-        await sharp(req.file.buffer).jpeg({quality: 60}).toFile(path.join("public", "uploaded-photos", req.cleanData.photo))
-        req.cleanData.photo = photo;
+        const photoFileName = `${Date.now()}.jpeg`;
+        await sharp(req.file.buffer).jpeg({quality: 60}).toFile(path.join("public", "uploaded-photos", photoFileName))
+        req.cleanData.photo = photoFileName;
 
         const info = await db.collection('kidsClothes').findOneAndUpdate({_id: new ObjectId(req.body._id)}, {$set: req.cleanData} )
         if (info.value.photo) {
