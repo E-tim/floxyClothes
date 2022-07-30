@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import axios from "axios";
 import ClothList from "./components/ClothList";
 import AddClothes from "./components/AddClothes";
+import { FaHome } from "react-icons/fa";
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
     return(
         <div>
             {/* <Header/> */}
+            <a href="/" style={{textDecoration: 'none', position: 'absolute', right: '10px', top: '2px', color: 'white', }}><FaHome style={{fontSize: '25px'}}/></a>
             <AddClothes setClothes={setClothes}/>
             
             <div className="myClothList">

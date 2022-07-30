@@ -9,6 +9,7 @@ const fse = require('fs-extra');
 const sharp = require('sharp');
 const sanitizeHTML = require('sanitize-html');
 const path = require('path')
+const mongoose = require('mongoose');
 // const upload = multer();
 require("dotenv").config()
 const app = express();
@@ -128,8 +129,7 @@ app.delete('/deleteCloth/:id', async(req, res)=> {
 //  connecting to mongo db
 const start = async() => {
     // const client = new MongoClient('mongodb://root:root@localhost:27017/floxyStore?&authSource=admin');
-    const client = new MongoClient(process.env.MONGODB_URI,{ useNewUrlParser: true });
-
+    const client = new MongoClient(  process.env.MONGODB_URI,{ useNewUrlParser: true, useUnifiedTopology: true, });
     await client.connect();
     db = client.db();
     app.listen(PORT)
